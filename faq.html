@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FAQ</title>
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+function showAnswer(id) {
+    var answer;
+
+    answer = document.getElementById(id);
+
+    if (answer.style.display == "none") {
+        answer.style.display = "block";
+    }
+    else {
+        answer.style.display = "none";
+    }
+}
+</script>
+</head>
+
+<body>
+<div class="overlay">
+
+<header>FAQ</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="order.html">Order</a>
+<a href="about.html">About</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<div class="title-line">
+<h2>Frequently Asked Questions</h2>
+</div>
+
+<div class="faq-box">
+
+<h3>Do you provide warranty?</h3>
+<button type="button" onclick="showAnswer('a1')">Show / Hide Answer</button>
+<p id="a1" style="display:none;">
+Yes, we provide warranty for our computers and main components.
+</p>
+
+<h3>Do you deliver products?</h3>
+<button type="button" onclick="showAnswer('a2')">Show / Hide Answer</button>
+<p id="a2" style="display:none;">
+Yes, we deliver orders to customers inside Oman.
+</p>
+
+<h3>Can I customize my PC?</h3>
+<button type="button" onclick="showAnswer('a3')">Show / Hide Answer</button>
+<p id="a3" style="display:none;">
+Yes, you can choose the PC parts that match your needs and budget.
+</p>
+
+<h3>What payment methods are available?</h3>
+<button type="button" onclick="showAnswer('a4')">Show / Hide Answer</button>
+<p id="a4" style="display:none;">
+You can pay by Cash or Card when confirming your order.
+</p>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 PC Store | Created by YOUSUF, AYHAM, MAZIN</p>
+</footer>
+
+</div>
+</body>
+</html>

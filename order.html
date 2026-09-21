@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order</title>
+<link rel="stylesheet" href="style.css">
+
+<script>
+function calc() {
+    var product;
+    var payment;
+
+    product = document.myform.product.value;
+    payment = document.myform.payment.value;
+
+    if (payment == "") {
+        alert("Please select a payment method");
+    }
+    else {
+        alert("Order Confirmed\nProduct: " + product + "\nPayment: " + payment);
+    }
+}
+</script>
+</head>
+
+<body>
+<div class="overlay">
+
+<header>Order Now</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="order.html">Order</a>
+<a href="about.html">About</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<section>
+<h2>Complete Your Order</h2>
+
+<div class="order-box">
+
+<form name="myform">
+<label>Full Name:</label>
+<input type="text" name="fullname" required>
+
+<label>Email:</label>
+<input type="email" name="email" required>
+
+<label>Select Product:</label>
+<select name="product">
+<option>Gaming PC - 500 OMR</option>
+<option>Office PC - 250 OMR</option>
+<option>Pro PC - 700 OMR</option>
+<option>Intel i7 - 180 OMR</option>
+<option>Ryzen 5 - 140 OMR</option>
+<option>Intel i9 - 300 OMR</option>
+<option>RTX 3060 - 220 OMR</option>
+<option>RTX 4060 - 280 OMR</option>
+<option>RTX 5060 - 350 OMR</option>
+<option>Liquid Cooler - 45 OMR</option>
+<option>Air Cooler - 25 OMR</option>
+<option>Pro Cooler - 60 OMR</option>
+<option>RGB Case - 35 OMR</option>
+<option>White Case - 40 OMR</option>
+<option>Black Case - 38 OMR</option>
+<option>Gaming Monitor - 120 OMR</option>
+<option>Mechanical Keyboard - 30 OMR</option>
+<option>Gaming Mouse - 20 OMR</option>
+<option>Gaming Headset - 25 OMR</option>
+<option>Gaming Chair - 95 OMR</option>
+<option>RGB Desk - 90 OMR</option>
+<option>Basic Setup - 650 OMR</option>
+<option>Advanced Setup - 950 OMR</option>
+<option>Pro Setup - 1400 OMR</option>
+</select>
+
+<label>Quantity:</label>
+<input type="number" name="quantity" min="1" max="10" value="1">
+
+<label>Payment Method:</label>
+<select name="payment">
+<option value="">Select Payment Method</option>
+<option value="Cash">Cash</option>
+<option value="Card">Card</option>
+</select>
+
+<button type="button" onclick="calc()">Confirm Order</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2026 PC Store | Created by YOUSUF, AYHAM, MAZIN</p>
+</footer>
+
+</div>
+</body>
+</html>
